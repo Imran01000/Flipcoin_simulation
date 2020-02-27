@@ -92,34 +92,34 @@ read -p "How many times flip do you want for triplet?" num
    for((itr=1;itr<=$(($num));itr++))
    do
       flip=$(($RANDOM%8))
-      case $flip in
-         0)
-         dictionary[hhh]=$((${dictionary[hhh]}+1))
-         ;;
-         1)
-         dictionary[thh]=$((${dictionary[thh]}+1))
-         ;;
-         2)  
-         dictionary[hth]=$((${dictionary[hth]}+1))
-         ;;
-         3)
-         dictionary[tth]=$((${dictionary[tth]}+1))
-         ;;
-			4)
-         dictionary[hht]=$((${dictionary[hht]}+1))
-         ;;
-         5)
-         dictionary[tht]=$((${dictionary[tht]}+1))
-         ;;
-         6)  
-         dictionary[htt]=$((${dictionary[htt]}+1))
-         ;;
-         7)
-         dictionary[ttt]=$((${dictionary[ttt]}+1))
-         ;;
+		case $flip in
+				0)
+				dictionary[hhh]=$((${dictionary[hhh]}+1))
+				;;
+				1)
+				dictionary[thh]=$((${dictionary[thh]}+1))
+				;;
+				2)  		
+				dictionary[hth]=$((${dictionary[hth]}+1))
+				;;
+				3)
+				dictionary[tth]=$((${dictionary[tth]}+1))
+				;;
+				4)
+				dictionary[hht]=$((${dictionary[hht]}+1))
+				;;
+				5)
+				dictionary[tht]=$((${dictionary[tht]}+1))
+				;;
+				6)  
+				dictionary[htt]=$((${dictionary[htt]}+1))
+				;;
+				7)
+				dictionary[ttt]=$((${dictionary[ttt]}+1))
+				;;
 
-      esac
-   done
+		esac	
+	done
 
 #Displaying dictionary.
 for keys in ${!dictionary[@]}
